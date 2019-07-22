@@ -1,17 +1,25 @@
 module.exports = app => {
   const express = require('express')
-  
+  const jwt = require('jsonwebtoken')
+  const assert = require('http-assert')
+  const AdminUser = require('../../models/AdminUser')
   const router = express.Router({
     mergeParams: true
   })
+
+  //创建资源
   router.post('/', async (req, res) => {
     const model = await req.Model.create(req.body)
     res.send(model)
   })
+
+  //修改资源
   router.put('/:id', async (req, res) => {
     const model = await req.Model.findByIdAndUpdate(req.params.id, req.body)
     res.send(model)
   })
+
+  //删除资源
   router.delete('/:id', async (req, res) => {
     await req.Model.findByIdAndDelete(req.params.id, req.body)
     res.send({
@@ -53,8 +61,9 @@ module.exports = app => {
     res.send(file)
   })
 
-  app.post('/admin/api/login', async(req, res) =>{
+  app.post('/admin/api/login', async (req, res) =>{
     const { username, password} = req.body
+
     // 1.根据用户名找用户
     const user = await AdminUser.findOne({username}).select('+password')
     assert(user, 422, '用户不存在')
