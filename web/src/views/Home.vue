@@ -27,37 +27,16 @@
     </div>
     <!-- end nav icons -->
 
-    <my-card icon="cc-menu-circle" title="新闻资讯">
-      <div class="nav jc-between">
-        <div class="nav-item active">
-          <div class="nav-link">热门</div>
+    <card-list icon="cc-menu-circle" title="新闻资讯" :categories="cateList">
+      <template #items="{category}">
+        <div class="py-2" v-for="(item, index) in category.newsList" :key="index">
+          <span>[{{item.categoryName}}]</span>
+          <span>|</span>
+          <span>{{item.title}}</span>
+          <span>{{item.date}}</span>
         </div>
-        <div class="nav-item">
-          <div class="nav-link">新闻</div>
-        </div>
-        <div class="nav-item">
-          <div class="nav-link">公告</div>
-        </div>
-        <div class="nav-item">
-          <div class="nav-link">活动</div>
-        </div>
-        <div class="nav-item">
-          <div class="nav-link">赛事</div>
-        </div>
-      </div>
-      <div class="pt-3">
-        <swiper>
-          <swiper-slide v-for="m in 5" :key="m">
-            <div class="py-2" v-for="n in 5" :key="n">
-              <span>[公告]</span>
-              <span>|</span>
-              <span>7月23日全服不停机更新公告</span>
-              <span>06/02</span>
-            </div>
-          </swiper-slide>
-        </swiper>
-      </div>
-    </my-card>
+      </template>
+    </card-list>
     <my-card icon="toukui" title="英雄列表"></my-card>
     <my-card icon="video" title="精彩视频"></my-card>
     <my-card icon="book" title="图文攻略"></my-card>
@@ -66,11 +45,13 @@
 
 <script>
 import MyCard from "../components/Card";
+import CardList from "../components/CardList";
 
 export default {
   name: "home",
   components: {
-    MyCard
+    MyCard,
+    CardList
   },
   data() {
     return {
@@ -79,7 +60,49 @@ export default {
           el: ".home-pagination"
         },
         loop: true
-      }
+      },
+      cateList: [
+        {
+          name: '热门',
+          newsList: new Array(5).fill(null).map(() => ({
+            categoryName: '公告',
+            title: '6月2日全服不停机更新公告',
+            date: '06/01'
+          }))
+        },
+        {
+          name: '新闻',
+          newsList: new Array(5).fill(null).map(() => ({
+            categoryName: '新闻',
+            title: '6月2日全服不停机更新公告',
+            date: '06/01'
+          }))
+        },
+        {
+          name: '公告',
+          newsList: new Array(5).fill(null).map(() => ({
+            categoryName: '公告',
+            title: '6月2日全服不停机更新公告',
+            date: '06/01'
+          }))
+        },
+        {
+          name: '活动',
+          newsList: new Array(5).fill(null).map(() => ({
+            categoryName: '公告',
+            title: '6月2日全服不停机更新公告',
+            date: '06/01'
+          }))
+        },
+        {
+          name: '赛事',
+          newsList: new Array(5).fill(null).map(() => ({
+            categoryName: '公告',
+            title: '6月2日全服不停机更新公告',
+            date: '06/01'
+          }))
+        }
+      ]
     };
   }
 };
