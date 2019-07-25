@@ -41,10 +41,10 @@
     <card-list icon="toukui" title="英雄列表" :categories="heroList">
       <template #items="{category}">
         <div class="d-flex flex-wrap" style="margin: 0 -0.5rem;">
-          <div class="p-2 text-center" style="width: 20%;" v-for="(hero, index) in category.heroList" :key="index">
+          <router-link tag="div" :to="`/heroes/${hero._id}`" class="p-2 text-center" style="width: 20%;" v-for="(hero, index) in category.heroList" :key="index">
             <img :src="hero.avatar" class="w-100">
             <div>{{hero.name}}</div>
-          </div>
+          </router-link>
         </div>
       </template>
     </card-list>
