@@ -3,7 +3,7 @@
 > 该项目是一个王者荣耀的webappp项目
 
 ## 运行项目
---- bash
+``` bash
 # 克隆项目到本地
 $ git clone https://github.com/dongsanjin/king_web.git
 
