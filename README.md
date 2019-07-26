@@ -21,9 +21,11 @@ $ npm run serve
 ```
 
 ### 效果预览图
+
 项目功能有首页、新闻详情页、英雄详情页
-![image](https://github.com/dongsanjin/king_web/preview/articleDetail.png)
-![image](https://github.com/dongsanjin/king_web/preview/heroDetail.png)
+
+![image text](https://github.com/dongsanjin/king_web/preview/articleDetail.png)
+![image text](https://github.com/dongsanjin/king_web/preview/heroDetail.png)
 ---
 
 ### 文件目录
