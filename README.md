@@ -27,7 +27,8 @@ $ npm run serve
 ---
 
 ### 文件目录
-C:\Users\86155\Desktop\vue_nodejs_king
+
+```
 ├── admin
 |  ├── babel.config.js
 |  ├── package-lock.json
@@ -76,6 +77,6 @@ C:\Users\86155\Desktop\vue_nodejs_king
    |  ├── router.js
    |  └── views
    └── vue.config.js
-
+```
 
 ## 项目后续会继续完善，谢谢大家的支持
