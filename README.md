@@ -2,7 +2,7 @@
 
 > 该项目是一个王者荣耀的webappp项目
 
-## 运行项目
+### 运行项目
 ``` bash
 # 克隆项目到本地
 $ git clone https://github.com/dongsanjin/king_web.git
@@ -79,4 +79,4 @@ $ npm run serve
    └── vue.config.js
 ```
 
-## 项目后续会继续完善，谢谢大家的支持
+### 项目后续会继续完善，谢谢大家的支持
