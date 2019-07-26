@@ -26,4 +26,56 @@ $ npm run serve
 ![image](https://github.com/dongsanjin/king_web/preview/heroDetail.png)
 ---
 
+### 文件目录
+C:\Users\86155\Desktop\vue_nodejs_king
+├── admin
+|  ├── babel.config.js
+|  ├── package-lock.json
+|  ├── package.json
+|  ├── public
+|  ├── README.md
+|  └── src
+|     ├── App.vue
+|     ├── assets
+|     ├── components
+|     ├── http.js
+|     ├── main.js
+|     ├── plugins
+|     ├── publicStyle.css
+|     ├── router.js
+|     └── views
+├── package-lock.json
+├── preview
+├── README.md
+├── server
+|  ├── index.js
+|  ├── middleware
+|  ├── models
+|  ├── package-lock.json
+|  ├── package.json
+|  ├── plugins
+|  |  └── db.js
+|  ├── routes
+|  |  ├── admin
+|  |  └── web
+|  └── uploads
+└── web
+   ├── babel.config.js
+   ├── package-lock.json
+   ├── package.json
+   ├── public
+   ├── README.md
+   ├── src
+   |  ├── App.vue
+   |  ├── assets
+   |  |  ├── iconfont
+   |  |  ├── images
+   |  |  └── scss
+   |  ├── components
+   |  ├── main.js
+   |  ├── router.js
+   |  └── views
+   └── vue.config.js
+
+
 ## 项目后续会继续完善，谢谢大家的支持
