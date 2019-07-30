@@ -51,7 +51,7 @@
                 </router-link>
                 <router-link tag="button" to="/" class="btn btn-lg flex-1 ml-2">
                   <i class="iconfont icon-back"></i>
-                  英雄介绍视频
+                  一图识英雄
                 </router-link>
               </div>
               <div class="skills bg-white mt-4">
