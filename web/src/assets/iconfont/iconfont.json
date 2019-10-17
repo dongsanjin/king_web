@@ -1,0 +1,51 @@
+{
+  "id": "1463163",
+  "name": "king_web",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "372210",
+      "name": "cc-menu-circle",
+      "font_class": "cc-menu-circle",
+      "unicode": "e672",
+      "unicode_decimal": 58994
+    },
+    {
+      "icon_id": "3265205",
+      "name": "头盔",
+      "font_class": "toukui",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
+    },
+    {
+      "icon_id": "3703986",
+      "name": "back",
+      "font_class": "back",
+      "unicode": "e67d",
+      "unicode_decimal": 59005
+    },
+    {
+      "icon_id": "5979970",
+      "name": "双上箭头-01",
+      "font_class": "shuangshangjiantou-",
+      "unicode": "e628",
+      "unicode_decimal": 58920
+    },
+    {
+      "icon_id": "5979971",
+      "name": "双下箭头-01",
+      "font_class": "shuangxiajiantou-",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    },
+    {
+      "icon_id": "7712691",
+      "name": "more",
+      "font_class": "more",
+      "unicode": "e731",
+      "unicode_decimal": 59185
+    }
+  ]
+}

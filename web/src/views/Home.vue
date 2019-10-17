@@ -14,15 +14,15 @@
     </swiper>
     <!-- swiper end -->
     <div class="nav-icons bg-white mt-3 text-center pt-3 tetx-drak-1">
-      <div class="d-flex flex-wrap">
+      <div class="d-flex flex-wrap nav-list">
         <div class="nav-item my-3" v-for="n in 10" :key="n">
           <i class="sprite sprite-news"></i>
           <div class="pt-2">爆料站</div>
         </div>
       </div>
-      <div class="bg-light py-2 fs-sm">
-        <i class="sprite sprite-arrow mr-1"></i>
-        <span>收起</span>
+      <div class="bg-light py-2 fs-sm" @click="changeShow">
+        <i class="mr-1 iconfont" :class="show === true ? 'icon-shuangxiajiantou-' : 'icon-shuangshangjiantou-'"></i>
+        <span>{{show === true ? "展示" : "收起"}}</span>
       </div>
     </div>
     <!-- end nav icons -->
@@ -48,21 +48,16 @@
         </div>
       </template>
     </card-list>
-
-    <my-card icon="video" title="精彩视频"></my-card>
-    <my-card icon="book" title="图文攻略"></my-card>
   </div>
 </template>
 
 <script>
-import MyCard from "../components/Card";
 import CardList from "../components/CardList";
 import dayjs from "dayjs";
 
 export default {
   name: "home",
   components: {
-    MyCard,
     CardList
   },
   data() {
@@ -73,6 +68,7 @@ export default {
         },
         loop: true
       },
+      show: false,
       cateList: [],
       heroList: []
     };
@@ -90,6 +86,16 @@ export default {
     async fetchHeroList() {
       const res = await this.$http.get("heroes/list");
       this.heroList = res.data;
+    },
+    changeShow() {
+      const navList = document.querySelector(".nav-list");
+      if(this.show){
+        navList.style.height = "16.2rem";
+        this.show = false;
+      }else {
+        navList.style.height = "5.5rem";
+        this.show = true;
+      }
     }
   },
   created() {
@@ -116,6 +122,9 @@ export default {
 .nav-icons {
   border-top: 1px solid $border-color;
   border-bottom: 1px solid $border-color;
+  .nav-list {
+    overflow: hidden;
+  }
   .nav-item {
     width: 25%;
     border-right: 1px solid $border-color;
